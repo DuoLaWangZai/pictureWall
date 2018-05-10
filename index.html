@@ -108,6 +108,10 @@ var PhotoWall = function($){
 // }
    	var utils = {
 
+   		getStyle:function(obj,attr){
+
+   		},
+
    		/**
    		*移动动画；
    		*/
@@ -122,6 +126,11 @@ var PhotoWall = function($){
 
    					var ispeed = json[attr] / 8;
    					ispeed = ispeed > 0 ? Math.ceil(ispeed) : Math.floor(ispeed);
+
+   					// 判断运动是否全部完成；
+   					var isCur = obj.css(attr);
+   					console.log(isCur);
+
 
    					obj.css(attr,ispeed+"px");
 
